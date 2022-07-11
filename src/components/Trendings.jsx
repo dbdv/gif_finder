@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTrendingsGifs } from "../services/getTrendingGifs";
 import GifsGrid from "./GifsGrid";
+import Loader from "./Loader";
 
 export default function Trendings({ changeKeyword }) {
   const [gifs, setGifs] = useState([]);
@@ -14,5 +15,9 @@ export default function Trendings({ changeKeyword }) {
     setGifs(data);
   };
   // console.log(gifs)
-  return <GifsGrid gifs={gifs} changeKeyword={changeKeyword} />;
+  return gifs.length === 0 ? (
+    <Loader />
+  ) : (
+    <GifsGrid gifs={gifs} changeKeyword={changeKeyword} />
+  );
 }

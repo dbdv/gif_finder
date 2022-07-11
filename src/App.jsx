@@ -8,23 +8,25 @@ function App() {
   const [keyword, setKeyword] = useState("");
 
   return (
-    <BrowserRouter>
-      <Routes>
-        {/*  <Route path="/search">
+    <div className="algo">
+      <BrowserRouter>
+        <Routes>
+          {/*  <Route path="/search">
           <Users />
         </Route> */}
-        <Route
-          path="/"
-          element={<Trendings changeKeyword={setKeyword} keyword={keyword} />}
-        />
-        <Route
-          path="/search"
-          element={
-            <SearchSection changeKeyword={setKeyword} keyword={keyword} />
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+          <Route
+            path="/"
+            element={<Trendings changeKeyword={setKeyword} keyword={keyword} />}
+          />
+          <Route
+            path="/search"
+            element={
+              <SearchSection changeKeyword={setKeyword} keyword={keyword} />
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
