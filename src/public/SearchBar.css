@@ -1,0 +1,24 @@
+.form {
+  background: #282c34;
+  width: fit-content;
+  height: fit-content;
+  /* padding: 0.1rem; */
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+
+.textSearch > input {
+  background: transparent;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  /* text-align: center; */
+  padding: 0.5rem;
+  outline: none;
+}
+
+.textSearch > input:focus {
+  background: white;
+  color: black;
+  border: 1px darkgray;
+}
